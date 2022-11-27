@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="circle"></div>
+        <header>
+            <a href="#"> <img src="logo.png" class="logo" alt=""> </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2 class="tulisan">It's not your time <br> it's <span class="coffe">coffe time</span></h2>
+                <p class="tulisan2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia neque tempora
+                    magnam possimus
+                    perspiciatis. Porro et voluptates repellat, obcaecati voluptas repudiandae doloremque ratione amet
+                    tempore labore debitis tempora rerum.</p>
+                <a href="#" class="belajar">Learn More</a>
+            </div>
+            <div class="imgbox">
+                <img src="img1.png" alt="" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" alt=""
+                    onclick="imgSlider('img1.png') ; ChangeCircleColor('#90B77D'); changeParagraphColor(''); changefullbackground('#483838')">
+            </li>
+            <li><img src="thumb2.png" alt=""
+                    onclick="imgSlider('img2.png'); ChangeCircleColor('#FEC8D8'); changeParagraphColor('#D291BC'); changefullbackground('#957DAD')">
+            </li>
+            <li><img src="thumb3.png" alt=""
+                    onclick="imgSlider('img3.png') ; ChangeCircleColor('#DEBACE'); changeParagraphColor('#BA94D1'); changefullbackground('#7F669D')">
+            </li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="facebook.png" alt=""></a></li>
+            <li><a href=""><img src="twitter.png" alt=""></a></li>
+            <li><a href=""><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+
+        }
+
+        function ChangeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+            const coffe = document.querySelector('.coffe');
+            coffe.style.color = color;
+        }
+
+        function changeParagraphColor(warna) {
+            const tulisan = {
+                heading: document.querySelector('.tulisan'),
+                para: document.querySelector('.tulisan2'),
+                belajar: document.querySelector('.belajar')
+            }
+            tulisan.heading.style.color = warna;
+            tulisan.para.style.color = warna;
+            tulisan.belajar.style.background = warna;
+
+        }
+
+        function changefullbackground(warna2) {
+            const latar = document.querySelector('.section');
+            latar.style.background = warna2;
+
+        }
+    </script>
+</body>
+
+</html>
